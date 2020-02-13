@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TvmazeShowsearchComponent } from './tvmaze-showsearch/tvmaze-showsearch.component';
+import {TvmazeService} from './tvmaze.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,10 @@ import { TvmazeShowsearchComponent } from './tvmaze-showsearch/tvmaze-showsearch
     TvmazeShowsearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TvmazeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
