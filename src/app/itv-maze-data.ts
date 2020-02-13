@@ -16,8 +16,8 @@ export interface ITvMazeData {
                              } 
                    },
           image: {
-                    medium:string,
-                    original:string
+                    medium:string
+                    
                  }
         }
 }

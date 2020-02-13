@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl:'http://'
+  baseUrl:'http://',
+  dummyUrl: 'http://api.tvmaze.com'
 };
 
 /*

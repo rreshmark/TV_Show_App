@@ -9,35 +9,28 @@
     <th>Runtime</th>
     <th>Showtiming</th>
     <th>Days</th>
-    <th>Network Name</th>
-    <th>TimeZone</th>
-    <th>Image</th>
+    
   </tr>
 </table>
 <div *ngFor="let item of current">
   <table class="customers">  
   <tr id="t1">
-    <td>{{item.id}}</td>
-    <td>{{item.name}}</td>
-    <td>{{item.language}}</td>
-
+    <td>{{item?.id}}</td>
+    <td>{{item?.name}}</td>
+    <td>{{item?.language}}</td>
     <td>
-      <div *ngFor = "let g1 of item.genre">
+      <div *ngFor = "let g1 of item?.genre">
               {{g1}}
       </div>
       </td>
-    <td>{{item.runtime}}</td>
-    <td>{{item.time}}</td>
-
+    <td>{{item?.runtime}}</td>
+    <td>{{item?.time}}</td>
     <td>
-      <div *ngFor = "let g2 of item.days">
+      <div *ngFor = "let g2 of item?.days">
         {{g2}}
       </div>
     </td>
-    <td>{{item.nwname}}</td>
-    <td>{{item.timezone}}</td>
-    <td>{{item.image}}</td>
-  </tr>
+   </tr>
   </table>
   </div>
 

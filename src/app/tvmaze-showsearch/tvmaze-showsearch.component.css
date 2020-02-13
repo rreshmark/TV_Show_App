@@ -26,6 +26,12 @@ th, td {
   max-width: 2px;
   border: 1px solid black;
   hyphens: auto;
+  text-align: center;
+}
+img {
+  
+  width:80%;
+  height:30%;
 }
 
 

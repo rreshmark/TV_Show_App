@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TvmazeShowsearchComponent } from './tvmaze-showsearch/tvmaze-showsearch.component';
 import {TvmazeService} from './tvmaze.service';
+import { DummyserviceService } from './dummyservice.service';
 import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [TvmazeService],
+  providers: [TvmazeService, DummyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
