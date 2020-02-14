@@ -15,19 +15,19 @@ export class TvmazeService {
 
   getTvmazeShowsearch(name: string):observable<ITvMaze>{
     return this.httpClient.get<ITvMazeData>(
-      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${name}`
-    ).pipe(map(dummydata => this.tarnsformToITvMaze(dummydata)));
+      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${name}&appid=${environment.appId}`
+    ).pipe(map(data => this.tarnsformToITvMaze(data)));
   }
 
-  private tarnsformToITvMaze( dummydata:ITvMazeData): ITvMaze{
+  private tarnsformToITvMaze( data:ITvMazeData): ITvMaze{
     return{
-      id: dummydata.show.id,
-      name:dummydata.show.name,
-      language:dummydata.show.language,
-      genre:dummydata.show.genres,
-      runtime:dummydata.show.runtime,
-      time:dummydata.show.schedule.time,
-      days:dummydata.show.schedule.days
+      id: data.show.id,
+      name:data.show.name,
+      language:data.show.language,
+      genre:data.show.genres,
+      runtime:data.show.runtime,
+      time:data.show.schedule.time,
+      days:data.show.schedule.days
     } 
 
 

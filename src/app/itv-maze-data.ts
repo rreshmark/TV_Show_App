@@ -1,5 +1,6 @@
 export interface ITvMazeData {
-  show:{
+  show: 
+    {
           id: number,
           name: string,
           language: string,
@@ -18,6 +19,6 @@ export interface ITvMazeData {
           image: {
                     medium:string
                     
-                 }
-        }
-}
+                 } 
+    }
+        

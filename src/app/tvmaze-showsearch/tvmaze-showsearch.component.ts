@@ -8,14 +8,14 @@ import { DummyserviceService } from '../dummyservice.service';
   styleUrls: ['./tvmaze-showsearch.component.css']
 })
 export class TvmazeShowsearchComponent implements OnInit {
-  current: ITvMaze[]
-  constructor(private ds:DummyserviceService) { 
+  current: ITvMaze
+  constructor(private tvmazeService: TvmazeService) { 
  
 
   }
 
   ngOnInit() {
-    this.ds.getTVData('girls').subscribe(dummydata => this.current = dummydata);
+    this.tvmazeService.getTvmazeshowsearch('girls').subscribe(data => this.current = data);
   }
 
 }
