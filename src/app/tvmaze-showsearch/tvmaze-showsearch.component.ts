@@ -14,7 +14,7 @@ export class TvmazeShowsearchComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  ngOnInit() { 
     this.tvmazeService.getTvmazeshowsearch('girls').subscribe(data => this.current = data);
   }
 

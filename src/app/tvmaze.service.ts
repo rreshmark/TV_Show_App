@@ -15,7 +15,7 @@ export class TvmazeService {
 
   getTvmazeShowsearch(name: string):observable<ITvMaze>{
     return this.httpClient.get<ITvMazeData>(
-      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${name}&appid=${environment.appId}`
+      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${name}`
     ).pipe(map(data => this.tarnsformToITvMaze(data)));
   }
 
