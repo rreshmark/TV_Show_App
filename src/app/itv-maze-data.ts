@@ -11,9 +11,9 @@ export interface ITvMazeData {
                     },
           network: {
                      name:string,
-                     country:{
-                               timezone:string
-                             } 
+                    //  country:{
+                    //            timezone:string
+                    //          } 
                    },
           image: {
                     medium:string,

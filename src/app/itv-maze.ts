@@ -1,12 +1,12 @@
 export interface ITvMaze {
-id: number
+id: number,
 name: string,
 language: string,
 genre: string[],
 runtime: number,
 time: string,
-days: string[],
+days: string[]
 nwname: string,
-timezone: string,
+//timezone: string,
 image: string,
 }

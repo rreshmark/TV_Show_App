@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <body>
   <div>
-    <h1>
+    <mat-toolbar color="primary">
       Welcome!
-    </h1>  
-  
-      <app-tvmaze-showsearch>
+    </mat-toolbar>  
+  <mat-card>
+    <app-tvmaze-search-box (searchboxoutput)="Dosearch($event)">
+      
+    </app-tvmaze-search-box>
+  </mat-card>
+      <app-tvmaze-showsearch [current]="Tvmazeshowresult">
 
       </app-tvmaze-showsearch>
         
